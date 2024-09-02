@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- Google fonts-code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap&family=Bree+Serif&display=swa" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<!-- --------------------------------------------------------------------- -->
+<link rel="icon" href='bookmark (1).png'>
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <section class="bookmark">
+
+    <div class="container text-center py-4 my-4">
+
+        <h1 class="mb-5">Bookmarker</h1>
+
+        <main class="">
+
+          <div id="favoriteSites" class="faviourite-sites px-4 my-3 py-4 ">
+            <h2 class="pb-4"><span><i class="fa-solid fa-bookmark"></i></span> Bookmark your favorite sites <span><i class="fa-solid fa-bookmark"></i></span></h2>
+
+          <div>
+            <label for="bookmarkName" class="d-block text-start pb-2 fw-semibold"><span><i class="fa-solid fa-book-bookmark pe-2"></i></span> Site Name</label>
+            <input oninput="validateInput(this)" type="text" class="form-control py-2" placeholder="Bookmark Name" aria-label="Bookmark name" id="bookmarkName" >
+          </div>
+
+          <div class="py-4">
+            <label for="bookmarkUrl" class="d-block text-start pb-2 fw-semibold"><span><i class="fa-solid fa-link pe-2"></i></span> Site URL</label>
+            <input oninput="validateInput(this)" type="text" class="form-control py-2" placeholder="Website URL" aria-label="Bookmarkname" id="bookmarkUrl" >
+          </div>
+
+          <button onclick="submit()" class="btn  px-5" id="submit" data-bs-toggle="" data-bs-target=""> Submit</button>
+
+
+
+
+
+
+
+
+          <div id="errorModal" class=" error  position-fixed end-0 start-0 top-0 bottom-0 bg-black bg-opacity-25 d-flex justify-content-center align-items-center d-none ">
+
+            <div class="item  bg-white p-4 text-start rounded-2">
+              <div class="top d-flex justify-content-between">
+                <div class="circles d-flex">
+                  <span class="rounded-circle"></span>
+                  <span class="rounded-circle"></span>
+                  <span class="rounded-circle"></span>
+                </div>
+                <button onclick="closeForm()" class="btn border-0" id="closeBtn">
+                  <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+              </div>
+              <p class="m-0 pb-2">
+                Site Name or Url is not valid, Please follow the rules below :
+              </p>
+              <p><i class="fa-regular fa-circle-right px-2 "></i> Site name must contain at least 3 characters </p>
+              <p><i class="fa-regular fa-circle-right px-2 "></i> Site URL must be a valid one</p>
+            </div>
+
+
+
+
+          </div>
+
+
+          </div>
+
+          <div class="memoery bg-white mt-4">
+           
+            <table class="table">
+              
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>Website Name</th>
+                  <th>Visit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody id="rowData">
+
+              </tbody>
+
+
+            </table>
+
+
+
+
+          </div>
+
+
+
+        </main>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
